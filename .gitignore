@@ -1,0 +1,34 @@
+# Docker
+.dockerignore
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Test artifacts
+postgres-data/
+*.pid
