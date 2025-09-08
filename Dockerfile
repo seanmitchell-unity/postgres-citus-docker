@@ -1,4 +1,3 @@
-# custom PostgreSQL 17 image with Citus, pg_partman, and pg_cron
 FROM postgres:17-bullseye
 
 RUN apt-get update && \
@@ -26,6 +25,5 @@ RUN echo "shared_preload_libraries = 'citus,pg_cron,pg_partman_bgw'" >> /usr/sha
     echo "pg_partman_bgw.dbname = 'nibbler'" >> /usr/share/postgresql/postgresql.conf.sample
 
 COPY init-extensions.sql /docker-entrypoint-initdb.d/
-COPY init-nibbler.sh /docker-entrypoint-initdb.d/
 
 EXPOSE 5432
