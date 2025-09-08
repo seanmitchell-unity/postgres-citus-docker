@@ -1,7 +1,7 @@
 FROM postgres:17-bookworm
 
 LABEL maintainer="Sean Mitchell <seanmitchell@unity3d.com>"
-LABEL description="PostgreSQL 17 with Citus, pg_partman, pg_cron extensions"
+LABEL description="PostgreSQL 17 with Citus, pg_partman, pg_cron, dblink extensions"
 
 # Install PostgreSQL extensions
 RUN set -ex && \
@@ -12,7 +12,8 @@ RUN set -ex && \
     apt-get install -y --no-install-recommends \
         postgresql-17-citus-13.0 \
         postgresql-17-cron \
-        postgresql-17-partman && \
+        postgresql-17-partman \
+        postgresql-contrib && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
