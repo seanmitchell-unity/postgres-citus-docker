@@ -1,5 +1,5 @@
 -- Install PostgreSQL extensions
--- This script runs during database initialization
+-- This script runs during db initialization
 
 CREATE EXTENSION IF NOT EXISTS citus;
 CREATE EXTENSION IF NOT EXISTS pg_cron;
